@@ -11,3 +11,13 @@
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none;
 }
+
+ul.todo-list {
+  list-style: none;
+
+  li {
+    height: 40px;
+    background-color: #f0f0f0;
+    margin-bottom: 15px;
+  }
+}

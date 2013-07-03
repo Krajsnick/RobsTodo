@@ -6,13 +6,12 @@
     <input type="text" ng-model="entry.text" placeholder="What todo...?">
   </form>
 
-  <table>
-    <tr ng-repeat="todo in todos">
-      <td>{{todo.text}}</td>
-      <td>{{todo.done}}</td>
-    </tr>
-  </table>
-{{entry.text}}
-{{someangular}}
+  <ul class="todo-list">
+    <li ng-repeat="todo in todos">
+      <span>{{todo.text}}</span>
+      <span>{{todo.done}}</span>
+    </li>
+  </ul>
+
 
 </div>
