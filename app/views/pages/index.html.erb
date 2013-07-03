@@ -7,9 +7,9 @@
   </form>
 
   <ul class="todo-list">
-    <li ng-repeat="todo in todos">
-      <span>{{todo.text}}</span>
-      <span>{{todo.done}}</span>
+    <li ng-repeat="todo in todos" ng-class="{completed: todo.done}">
+      <input type="checkbox" class="toggle" ng-model="todo.done">
+      <span class="todo-text">{{todo.text}}</span>
     </li>
   </ul>
 

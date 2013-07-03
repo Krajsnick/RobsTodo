@@ -1,3 +1,5 @@
+@import "foundation/foundation-global";
+
 .main-container {
   width: 800px;
   padding: 10px;
@@ -16,8 +18,35 @@ ul.todo-list {
   list-style: none;
 
   li {
-    height: 40px;
+    position: relative;
+    height: 55px;
     background-color: #f0f0f0;
     margin-bottom: 15px;
+    border: solid 1px #666;
+    font-size: emCalc(22px);
+
+    input.toggle {
+      width: 40px;
+      text-align: center;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+
+      &:after {
+        content: '✔';
+        font-size: emCalc(36px);
+        line-height: 43px;
+      }
+    }
+
+    span.todo-text {
+      position: absolute;
+      top: 7px;
+    }
+  }
+
+  li.completed {
+    background-color: #008000;
   }
 }
