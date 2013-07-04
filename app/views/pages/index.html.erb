@@ -10,6 +10,7 @@
     <li ng-repeat="todo in todos" ng-class="{completed: todo.done}">
       <input type="checkbox" class="toggle" ng-model="todo.done">
       <span class="todo-text">{{todo.text}}</span>
+      <button class="delete-button" ng-click="destroyTodo()">delete</button>
     </li>
   </ul>
 
