@@ -18,3 +18,6 @@ app.factory "Todo", ($resource) ->
   $scope.destroyTodo = (todo) ->
     Todo.remove(todo)
     $scope.todos.splice($scope.todos.indexOf(todo), 1)
+
+  $scope.completeTodo = (todo) ->
+    Todo.update(todo)
