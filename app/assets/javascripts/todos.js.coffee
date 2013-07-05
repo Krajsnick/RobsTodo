@@ -11,8 +11,8 @@ app.factory "Todo", ($resource) ->
   $scope.todos = Todo.query()
 
   $scope.addTodo = ->
-    Todo.save({text: $scope.entry.text, done: false})
-    $scope.todos.push(text: $scope.entry.text, done: false)
+    todo = Todo.save({text: $scope.entry.text, done: false})
+    $scope.todos.push(todo)
     $scope.entry.text = ''
 
   $scope.destroyTodo = (todo) ->
