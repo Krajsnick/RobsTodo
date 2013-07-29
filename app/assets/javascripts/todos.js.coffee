@@ -12,7 +12,7 @@ app.factory "Todo", ($resource) ->
 
   $scope.addTodo = ->
     todo = Todo.save({text: $scope.entry.text, done: false})
-    $scope.todos.push(todo)
+    $scope.todos.unshift(todo)
     $scope.entry.text = ''
 
   $scope.destroyTodo = (todo) ->
