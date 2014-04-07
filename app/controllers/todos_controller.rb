@@ -2,7 +2,7 @@ class TodosController < ApplicationController
   respond_to :json
 
   def index
-    respond_with Todo.all.reverse_order 
+    respond_with Todo.all.reverse_order
   end
 
   def show
